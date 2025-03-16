@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Train Model</h2>
+{% if accuracy %}
+    <h3>Model Training Complete</h3>
+    <p>Accuracy: <span style="color: green;">{{ accuracy }}</span></p>
+    <h4>Classification Report:</h4>
+    <pre>{{ report }}</pre>
+{% else %}
+    <form method="post">
+        <button type="submit">Start Training</button>
+    </form>
+{% endif %}
+{% endblock %}

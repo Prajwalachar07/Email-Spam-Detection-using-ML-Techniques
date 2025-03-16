@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+<h2>Test a Message</h2>
+<form method="post">
+    <textarea name="message" placeholder="Enter your message here"></textarea><br>
+    <button type="submit">Predict</button>
+</form>
+{% if result is not none %}
+    <div>
+        <h3>Prediction Result:</h3>
+        <p><strong>Message:</strong> {{ message }}</p>
+        <p><strong>Result:</strong> {{ result }}</p>
+    </div>
+{% endif %}
+{% endblock %}
