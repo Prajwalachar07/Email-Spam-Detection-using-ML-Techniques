@@ -1,6 +1,8 @@
 flask;
 pandas;
+gunicorn;
 scikit-learn;
 numpy;
 nltk;
 emoji;
+pickle;
